@@ -1,3 +1,5 @@
+<?php include('dbconnect.php'); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,7 +19,7 @@
   border-width: 0.1px;
   padding: 10px;
 }
-.box {
+/* .box {
   border-style: solid;
   border-width: 0.1px;
   line-height: 100px;
@@ -27,7 +29,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-}
+} */
 #body{
   margin-top: 50px;
 }
@@ -43,37 +45,27 @@
           </div>
         </div>
     </div>
-    <div class="container-fluid" id="body">
+    <div class="container" id="body">
       <div class="row">
-       <div class="col-3">
-         <img class="img-fluid" width="100%" src="images/box.jpeg" alt="">
-        <form style="margin-top: 30px;">
-          <div class="form-group row">
-              <label for="inputPassword" class="col-sm-4 col-form-label">A :</label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputPassword" onmouseover="changeImageA()" onmouseout="resetimage()" placeholder="A">
+        <div class="card-deck">
+        <?php $sql = "SELECT * FROM `product` WHERE `product_categoty_id`= 1";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                              // output data of each row
+                              while($row = $result->fetch_assoc()) { ?>
+            <div class="card col-md-3">
+              <img src="images/box.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="boxestimate.php?product_id=<?php echo $row[product_id]; ?>"><h5 class="card-title"><?php echo $row[product_name]; ?></h5></a>
               </div>
             </div>
-            <div class="form-group row">
-              <label for="inputPassword" class="col-sm-4 col-form-label">B :</label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputPassword"  onmouseover="changeImageB()" onmouseout="resetimage()" placeholder="B">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputPassword" class="col-sm-4 col-form-label">C :</label>
-              <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputPassword"  onmouseover="changeImageC()" onmouseout="resetimage()" placeholder="C">
-              </div>
-            </div>
-        </form>
-       </div>
-       <div class="col-3">
-           Best Choice
-       </div>
-       <div class="col-6">
-           Image
-       </div>
+            <?php
+          }
+                            } else {
+                                echo "0 results";
+                            }
+                            $conn->close(); ?>
+          </div>
       </div>
     </div>
     <!-- Optional JavaScript -->

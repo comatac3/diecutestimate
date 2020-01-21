@@ -1,0 +1,82 @@
+.headder {
+    border-style: solid;
+    border-width: 0.1px;
+    padding: 10px;
+  }
+
+  .box {
+    border-style: solid;
+    border-width: 0.1px;
+    line-height: 100px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #body {
+    margin-top: 20px;
+  }
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  div.polaroid {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+
+  div.containers {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  .headder{
+    border-style: solid;
+    border-width: 0.1px;
+    padding: 10px;
+  }
+  .box {
+    border-style: solid;
+    border-width: 0.1px;
+    line-height: 50px;
+    height: 500px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  #body{
+    margin-top: 10px;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #8d8b8b;
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

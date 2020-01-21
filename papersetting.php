@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/810f557310.js" crossorigin="anonymous"></script>
     <title>Hello, world!</title>
     <script src="two.js"></script>
   </head>
@@ -17,7 +17,7 @@
   border-width: 0.1px;
   padding: 10px;
 }
-/* .box {
+.box {
   border-style: solid;
   border-width: 0.1px;
   line-height: 100px;
@@ -27,9 +27,27 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-} */
+}
+.box2 {
+  border-style: solid;
+  border-width: 0.1px;
+  line-height: 100px;
+  /* height: 500px; */
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 #body{
   margin-top: 50px;
+}
+a{
+  color: black;
+}
+a:hover{
+  color: black;
+  text-decoration: none;
 }
 </style>
 
@@ -45,32 +63,31 @@
     </div>
     <div class="container" id="body">
       <div class="row">
-        <div class="card-deck">
-            <div class="card">
-              <img src="images/box.jpeg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <a href="boxestimate.html"><h5 class="card-title">กล่องฝาเสียบก้นเสียบ</h5></a>
-              </div>
-            </div>
-            <div class="card">
-                <img src="images/box.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <a href="boxestimate.html"><h5 class="card-title">กล่องฝาเสียบก้นเสียบ</h5></a>
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/box.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">กล่องฝาเสียบก้นเสียบ</h5>
-                </div>
-              </div>
-              <div class="card">
-                <img src="images/box.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">กล่องฝาเสียบก้นเสียบ</h5>
-                </div>
-              </div>
-          </div>
+        <div class="col-12" style="padding: 20px; text-align:center">
+         <h1>Which setting do you need?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 box">
+          <p style="font-size:50px; line-height:70px">
+            <a href="rawmaterialsetting.php">RAW</br>MATERIAL</a> 
+          </p>
+        </div>
+        <div class="col-4 box">
+            <p style="font-size:50px; line-height:70px">
+            <a href="processsetting.php">PROCESS</a>
+          </p>
+        </div>
+        <div class="col-4 box">
+        <p style="font-size:50px; line-height:70px">
+            <a href="papersetting_prepress.php">PRE PRESS PAPER</a>
+          </p>
+        </div>
+        <div class="col-12 box2">
+        <p style="font-size:50px; line-height:70px">
+            <a href="papersetting_prepress.php">ADD PRODUCT</a>
+          </p>
+        </div>
       </div>
     </div>
     <!-- Optional JavaScript -->
